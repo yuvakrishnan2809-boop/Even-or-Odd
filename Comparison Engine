@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class ComparisonEngine {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first value: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second value: ");
+        int b = sc.nextInt();
+
+        System.out.print("Enter third value: ");
+        int c = sc.nextInt();
+        
+        System.out.print("Enter fourth value:");
+        int d = sc.nextInt();
+
+        if (a >= b && a >= c) {
+            System.out.println("Highest value is: " + a);
+        } else if (b >= a && b >= c) {
+            System.out.println("Highest value is: " + b);
+        } else {
+            System.out.println("Highest value is: " + c);
+        }
+
+        sc.close();
+    }
+}
