@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class SecurityCodeValidator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter security code: ");
+        int code = sc.nextInt();
+
+        int original = code;
+        int reversed = 0;
+
+        while (code > 0) {
+            int digit = code % 10;
+            reversed = reversed * 10 + digit;
+            code = code / 10;
+        }
+
+        if (original == reversed) {
+            System.out.println("Valid Security Code");
+        } else {
+            System.out.println("Invalid Security Code");
+        }
+    }
+}
